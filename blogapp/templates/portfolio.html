@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'base.html' %}
+{% block content %}
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DongGu Blog</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+<div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+    <div class="row mb-2">
+        <div class="col-md-6">
+            <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-success">희번득</strong>
+                <h3 class="mb-0">화장품 세일정리 웹</h3>
+                <div class="mb-1 text-muted">2019.01 ~ 2019.03</div>
+                <p class="card-text mb-auto">수없이 많은 화장품 세일정보를 모았어요. 세일가격에 "희번득"해라!</p>
+                <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block" >
+                <img src="{% static 'heeburndeuk1.jfif' %}" class="img-thumbnail" style="width: 200px; height: 250px;">
+            </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-success">울학교방값</strong>
+                <h3 class="mb-0">대학교 기숙사와 원룸 관계 분석!</h3>
+                <div class="mb-1 text-muted">2018.08</div>
+                <p class="mb-auto">대학교 기숙사 현황과 원룸 가격 관계를 알아보자!</p>
+                <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+                <img src="https://postfiles.pstatic.net/MjAxOTA1MzBfMjg5/MDAxNTU5MjE0OTE1NTQy.aO1685-7yZDdVelcMsXDAYt_CBMSlQCUYFGcQjpnZZAg.ohnXUGifmh0xomKEu5X6EOsCxO9kNfZBiZj1TX4lD0gg.JPEG.ehdrn463/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C1.JPG?type=w773" class="img-thumbnail" style="width: 200px; height: 250px;">
+            </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-success">네이버댓글분석</strong>
+                <h3 class="mb-0" style="font-size: 25px;">네이버 뉴스댓글 분석</h3>
+                <div class="mb-1 text-muted">2019. 03 ~ 2019. 06</div>
+                <p class="mb-auto">댓글알바, 침묵의 나선이론 효과 아직도 유효할까?</p>
+                <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+                <img src="https://postfiles.pstatic.net/MjAxOTA1MzFfNTkg/MDAxNTU5MjMxMzA0MzAx.pmj_cpmGU0Glops-bDYYPH6ePSc7iiQ9AfcG8csMkAMg.67CKyBQd5y8PA2W5Wx_XvOY6hJKfttCsxJS31WOibqgg.JPEG.ehdrn463/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C1.JPG?type=w773" class="img-thumbnail" style="width: 200px; height: 250px;">
+            </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-success">정보공개청구</strong>
+                <h3 class="mb-0">What's next?</h3>
+                <div class="mb-1 text-muted">2019. 07 ~</div>
+                <p class="mb-auto">'미디어눈' 장애아동 프로젝트 (with 재단법인 동천)</p>
+                <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+                <img src="{% static 'medianoon.png' %}" class="img-thumbnail" style="width: 200px; height: 250px;">
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+{% endblock %}
+</body>
+</html>

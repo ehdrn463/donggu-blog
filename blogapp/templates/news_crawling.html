@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'base.html' %}
+{% block content %}
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-left">
+    <h1 class="display-4">왜 '네이버뉴스 댓글 분석'을 하게 되었나요?</h1>
+    <p class="lead">'댓글알바'가 유효한지 궁금했어요.</p>
+</div>
+
+<div class="container">
+    <div class="card-deck mb-3 text-center">
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">프로젝트 배경</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="my-0 font-weight-light" style="font-size: 16px;">'댓글알바'가 먹힐까?</h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>침묵의 나선 이론효과가</li>
+                    <li>2019년에도 존재할지 궁금했죠</li>
+                    <li>'순공감순', '최신순' 댓글 경향이 다를까?</li>
+                </ul>
+                <button type="button" class="btn btn-lg btn-block btn-outline-primary"><a href="#comment_policy">댓글정책 어떻게 다르죠?</a></button>
+            </div>
+        </div>
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">분석 결과</h4>
+            </div>
+            <div class="card-body">
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>한글 감성어 사전으로 분류했는데</li>
+                    <li>형태소 분류도 잘 안되고,</li>
+                    <li>'중립'이 너무 많이 나왔어요</li>
+                    <li>의미분류가 제대로 안돼서...분석실패</li>
+                </ul>
+                <button type="button" class="btn btn-lg btn-block btn-outline-primary"><a href="#summary">결과 보기</a></button>
+            </div>
+        </div>
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">코드 설명</h4>
+            </div>
+            <div class="card-body">
+                <ul class="list-unstyled mt-3 mb-4">
+                <li>네이버뉴스 댓글 크롤링</li>
+                <li>문장을 형태소로 분류</li>
+                <li>감성어사전을 이용한 의미 분류</li>
+                <li><br></li>
+                </ul>
+                <button type="button" class="btn btn-lg btn-block btn-outline-primary"><a href="https://github.com/ehdrn463/chocopython">깃헙 코드주소</a></button>
+            </div>
+        </div>
+    </div>
+    <a name="comment_policy"></a>
+    <div class="comment_policy" style="text-align: center;">
+        <img src="{% static 'news_crawling1.jfif' %}">
+        <img src="{% static 'news_crawling2.jfif' %}">
+    <a name="summary"></a>
+    <div class="summary" style="text-align: center;">
+        <img src="{% static 'news_crawling3.jfif' %}">
+        <img src="{% static 'news_crawling4.jfif' %}">
+        
+    </div>
+
+</div>
+                        
+</body>
+{% endblock %}
+</html>

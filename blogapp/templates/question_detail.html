@@ -1,0 +1,15 @@
+
+
+{% extends 'base.html' %}
+{% block content %}
+{% load staticfiles %}
+    <div class="jumbotron jumbotron-fluid">
+        <h2>{{postingNumb.title}} </h2>
+        <p> {{postingNumb.pubData}} </p>
+        <p> {{postingNumb.body}} </p>
+    </div>
+
+    <div class="but">
+        <input type='button' value='돌아가기' onclick='javascript:history.go(-1);'>
+    </div>
+{% endblock %}

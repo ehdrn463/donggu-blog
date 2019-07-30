@@ -1,0 +1,13 @@
+
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+    {% for a in modelList.all %}
+        <div class="jumbotron jumbotron-fluid">
+            {{a.id}}
+            <a href="{% url 'question_detail' a.id %}" <h2> {{a.title}} </h2> </a>
+            {{a.pubDate}}
+            {{a.body}}
+        </div>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'base.html' %}
+{% block content %}
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DongGu Blog</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+<div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 px-0">
+                <h1 class="display-4 font-italic">'철학'으로 포장하고<br> '내주장'하는 블로그</h1>
+                <p class="lead my-3">쓸데없이 남걱정 많은 언론정보학과생이 코딩으로 남걱정하며 글씁니다.</p>
+                <p class="lead mb-0"><a href="{% url 'aboutMe' %}" class="text-white font-weight-bold"> 제가 더 궁금하시다면..</a></p>
+            </div>
+
+            <div class="col-md-6 px-0">
+                <p class="lead my-3" style="text-align: center;">이건 어떻게 생각하세요?</p>
+                <div class="tell_me">    
+                    <form action="{% url 'send' %}">
+                        제목:<textarea cols="65%" rows=1" name="title"></textarea>
+                        본문:<textarea cols="65%" rows=8" name="body"></textarea>
+                        <br>
+                        <input type="submit" value="읽어주세요" style="text-align: right;">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-2">
+    <div class="col-md-6">
+        <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-primary">About Me</strong>
+                <h3 class="mb-0">사회와 코딩에 관심 많은 청년 김동구입니다.</h3>
+                <div class="mb-1 text-muted"></div>
+                <p class="card-text mb-auto">중학생 때 폐지줍는 어르신을 보며 기자를 꿈꾸게 되었습니다. 데이터를 저널리즘에 녹이고자 합니다.</p>
+                <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block" >
+                <img src="{% static 'donggu.jpg' %}" class="img-thumbnail" style="width: 200px; height: 250px;">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+                <strong class="d-inline-block mb-2 text-success">정보공개청구</strong>
+                <h3 class="mb-0">다음 할 일</h3>
+                <div class="mb-1 text-muted">2019.07 ~</div>
+                <p class="mb-auto">비영리 청년크리에터 '미디어눈'에서 '장애아동'과 '특수학교'를 공공데이터로 말할 예정입니다.</p>
+                <a href="#" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+                <img src="{% static 'medianoon.png' %}" class="img-thumbnail" style="width: 200px; height: 250px;">
+        </div>
+    </div>
+</div> 
+{% endblock %}
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'base.html' %}
+{% block content %}
+{% load staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-left">
+    <h1 class="display-4">왜 '울학교방값'을 하게 되었나요?</h1>
+    <p class="lead">학교마다 기숙사 비용 차이가 천차만별인 이유가 궁금했어요.. 집없어서 서러워요...</p>
+</div>
+
+<div class="container">
+    <div class="card-deck mb-3 text-center">
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">프로젝트 배경</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="my-0 font-weight-light" style="font-size: 16px;">기숙사 월세가 40만원이라니.. 못믿었죠</h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>학생이 많거나 등록금이 비싼 학교가</li>
+                    <li>기숙사도 비쌀 줄 알았는데..</li>
+                    <li>그게 아니더라구요..</li>
+                </ul>
+                <button type="button" class="btn btn-lg btn-block btn-outline-primary"><a href="#dorm_price">기숙사가격 보러가기</a></button>
+            </div>
+        </div>
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">분석 결과</h4>
+            </div>
+            <div class="card-body">
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>등록금, 학생수</li>
+                    <li>기숙사 수용률, 인근 원룸 월세</li>
+                    <li>모두 기숙사 월세와</li>
+                    <li>'약한 상관관계'를 보였어요</li>
+                </ul>
+                <button type="button" class="btn btn-lg btn-block btn-outline-primary"><a href="#summary">결과 보기</a></button>
+            </div>
+        </div>
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">코드 설명</h4>
+            </div>
+            <div class="card-body">
+                <ul class="list-unstyled mt-3 mb-4">
+                    <li>부동산 중개앱 '다방' 크롤링</li>
+                    <li>'대학알리미' 엑셀파일 DB 연동</li>
+                    <li>시각화</li>
+                    <li><br></li>
+                </ul>
+                <button type="button" class="btn btn-lg btn-block btn-outline-primary"><a href="https://github.com/ehdrn463/chocopython">깃헙 코드주소</a></button>
+            </div>
+        </div>
+    </div>
+    <a name="dorm_price"></a>
+    <div class="dorm_price" style="text-align: center;">
+        <img src="{% static 'our_school1.jfif' %}">
+        <img src="{% static 'our_school2.jfif' %}">
+    </div>
+    <a name="summary"></a>
+    <div class="summary" style="text-align: center;">
+        <img src="{% static 'our_school3.jfif' %}">
+        <img src="{% static 'our_school4.jfif' %}">
+        <img src="{% static 'our_school5.jfif' %}">
+        <img src="{% static 'our_school6.jfif' %}">
+        <img src="{% static 'our_school7.jpg' %}">
+    </div>
+</div>
+                        
+</body>
+{% endblock %}
+</html>
